@@ -145,7 +145,7 @@ int main()
                         }
                         case 3:
                         {
-                            std::cout << "Введите имя автора: ";
+                            std::cout << "Чьи рукописи тебе интересны?: ";
                             std::cin.ignore(std::cin.rdbuf()->in_avail());
                             std::string str{};
                             std::getline(std::cin, str);
@@ -165,6 +165,10 @@ int main()
                 catch (std::invalid_argument exception)
                 {
                     std::cout << "Ошибка чтения! " << exception.what() << '\n';
+                }
+                catch (std::out_of_range exception)
+                {
+                    std::cout << "Ошибка: " << exception.what() << '\n';
                 }
                 
             } while (action_choice != 11);

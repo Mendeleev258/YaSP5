@@ -19,10 +19,30 @@ public:
 	void clear() { container.clear(); }
 	void add_left(const T& value) { container.push_front(value); }
 	void add_right(const T& value) { container.push_back(value); }
-	void remove_left() { container.pop_front(); }
-	void remove_right() { container.pop_back(); }
-	void change_left(const T& value) { container[0] = value; }
-	void change_right(const T& value) { container[size() - 1] = value; }
+	void remove_left() 
+	{ 
+		if (size() == 0)
+			throw std::out_of_range("Библиотека пуста!");
+		container.pop_front();
+	}
+	void remove_right() 
+	{ 
+		if (size() == 0)
+			throw std::out_of_range("Библиотека пуста!");
+		container.pop_back();
+	}
+	void change_left(const T& value) 
+	{
+		if (size() == 0)
+			throw std::out_of_range("Библиотека пуста!");
+		container[0] = value; 
+	}
+	void change_right(const T& value) 
+	{
+		if (size() == 0)
+			throw std::out_of_range("Библиотека пуста!");
+		container[size() - 1] = value; 
+	}
 	size_t size() { return container.size(); }
 	Library<T> selection(std::function<bool(const T&)> predicate)
 	{

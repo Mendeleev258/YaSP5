@@ -129,18 +129,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Library.cpp" />
     <ClCompile Include="Library.ixx" />
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="Manuscript.cpp" />
     <ClCompile Include="Manuscript.ixx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Library.h" />
-    <ClInclude Include="Manuscript.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="data.txt" />
