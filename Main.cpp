@@ -111,7 +111,7 @@ int main()
                         {
                             int size1{};
                             int size2{};
-                            validation(size1, [](int x) {return x >= 0; }, "От скольки симолов ищем?");
+                            validation(size1, [](int x) {return x >= 0; }, "От скольки символов ищем?");
                             validation(size2, [size1](int x) {return x > size1; }, "И до скольки?");
                             tmp_lib = library.selection([size1, size2](const Manuscript& elem)
                                 { return size2 > elem.get_text().size() && size1 <= elem.get_text().size(); });
